@@ -1,0 +1,310 @@
+ /* Desktop Version */
+ html, body {
+    overflow-x: hidden;
+  }
+    .vergleich{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        font-size: 22px;
+        margin: 100px 20px;
+    }
+    @media screen and (max-width: 1100px){
+        .vergleich{
+            flex-direction: column;
+            font-size: 20px;
+        }
+    }
+    .vergleich h3{
+        color: #2C3F6E;
+        font-size: 28px;
+    }
+    .vergleich div{
+        max-width: 590px;
+    }
+    .vergleich div .vergleich-bilder{
+        display: flex;
+        gap: 20px;
+    }
+    .vergleich-bilder div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #F87921;
+    font-weight: 600;
+    }    
+    @media screen and (max-width: 560px){
+        .vergleich-bilder{
+            flex-direction: column;
+            }   
+            .center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    }
+  
+    
+    .vergleich-bilder .drehen{
+        flex-direction: column-reverse;
+        }
+        @media screen and (max-width: 560px){
+            .vergleich-bilder .drehen{
+                flex-direction: column;
+                }
+        }
+        .vergleich-bilder img{
+            max-width: 250px;
+            height: auto;
+        }
+
+  .partner{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 19px;
+  }
+  .partner div a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #2C3F6E;
+    padding: 20px 200px 20px 100px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-radius: 0px 50px 0px 0px;
+
+  }
+
+  /* Container für den Slider */
+.slider-container {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    background-color: #F87921;
+    padding-top: 30px;
+}
+
+/* Der Slider selbst */
+.slider {
+    gap: 30px;
+    display: flex;
+    animation: slide 10s infinite alternate linear; /* Standardanimation */
+
+}
+
+/* Stil für jedes Bild (Logo) */
+.slider a {
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: 20px;
+}
+
+.slider img {
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Animation für den Slider */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Desktop: Bildgröße 500px */
+@media (min-width: 1200px) {
+    .slider img {
+        width: 200px;
+    }
+    .slider {
+        animation-duration: 25s; /* Längere Animation für Desktop */
+    }
+}
+
+/* Tablet: Bildgröße 200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .slider img {
+        width: 200px;
+    }
+    .slider {
+        animation-duration: 11s; /* Kürzere Animation für Tablets */
+        gap: 0px;
+    }
+}
+
+/* Mobile: Bildgröße 150px */
+@media (max-width: 767px) {
+    .slider img {
+        width: 150px;
+    }
+    .slider {
+        animation-duration: 8s; /* Noch kürzere Animation für Mobile */
+        gap: 0px;
+    }
+}
+
+  .ueber-uns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    align-items: center;
+  }
+  .ueber-uns div{
+    max-width: 800px;
+  }
+  .ueber-uns div h3{
+    color: #F87921;
+    font-size: 34px;
+    line-height: 26px;
+  }
+  .ueber-uns div h3 span{
+    color: #2C3F6E;
+    font-size: 26px;
+    line-height: 18px;
+  }
+  .ueber-uns div p{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .ueber-uns img{
+    max-width: 380px
+  }
+  @media screen and (max-width: 849px){
+    .ueber-uns img{
+        display: none;
+      }
+      .partner div a{
+        padding: 0px 0;
+        font-size: 2rem;
+        font-weight: 600;
+        border-radius: 0;
+      }
+      .partner{
+        display: flex;
+        justify-content: center;
+        background-color: #2C3F6E;
+        padding: 19px;
+        margin: 0;
+      }
+  }
+  
+  .karten-berreich {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 387px);
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: -80px;
+    padding: 20px;
+    max-width: calc(3 * 387px + 2 * 20px); /* = 1201px */
+    margin: 0 auto;
+}
+
+.karten-berreich a {
+    width: 387px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.karten-berreich a:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #f8d3b99d;
+}
+
+.karten-berreich a img {
+    width: 100%;
+    height: 258px;
+    border-radius: 50px 50px 0px 0px;
+    object-fit: cover;
+}
+.karten-berreich a p {
+    padding: 0px 20px 20px 20px;
+    font-size: 23px;
+    color: #000;
+}
+.karten-berreich a h3 {
+   font-size: 30px;
+   color: #2C3F6E;
+}
+
+.header{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../image/header.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header .center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff57 ;
+    padding: 20px 50px;
+    border-radius: 0 0 70px 70px ;
+    margin-bottom: 50px;  
+    color: #2C3F6E;
+    text-align: center;
+}
+.header .center h1, h2{
+margin: 0;
+font-size: 3rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header{
+        width: 100%;
+        height: 50vh;
+       
+    }
+    .header .center h1, h2{
+        margin: 0;
+        font-size: 2rem;
+        }
+        .header .center{
+            margin-bottom: 30px;  
+        }
+        .ueber-uns{
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 150px;
+            align-items: center;
+          }
+}
+
+/* Mobile Version */
+@media screen and (max-width: 800px) {
+    .header{
+        width: 100%;
+        height: 80vh;
+       
+    }
+}
+
+@media screen and (max-width: 849px){
+    .ueber-uns {
+        margin-bottom: 100px;
+        margin-top: 0;
+      }
+
+  }

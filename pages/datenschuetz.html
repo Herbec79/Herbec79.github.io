@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../css/tamplate.css">
+    <link rel="stylesheet" href="../css/sub-page.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - Herbec</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="subnavi">
+            <div class="Mail">
+                <img src="../image/mail.png" alt="E-mail">
+                <a href="mailto:herbec@icloud.com">Herbec@icloud.com</a>
+            </div>
+            <div class="phone">
+                <img src="../image/tel.png" alt="Telefon">
+                <a href="tel:+4917662786286">+49 176 627 862 86</a>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html">
+                <img class="logo" src="../image/logo_klein.png" alt="Herbec Malerbetrieb">
+            </a>
+            
+            <!-- Desktop navigation -->
+            <div class="desktop-navigation">
+                <div>
+                    <ul>
+                        <li><a title="Startseite" href="../index.html">Startseite</a></li>
+                        <li><a title="Über uns"  href="./ueber-uns.html">Über uns</a></li>
+                        <li><a title="Leistungen" href="./leistungen.html">Leistungen</a></li>
+                        <li><a title="Kontakt" class="kontakt" href="./kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <!-- mobile Navigation -->
+
+            <div class="mobile-navigation">
+                <div class="off-screen-menu">
+                    <ul>
+                        <li><a title="Startseite" href="../index.html">Startseite</a></li>
+                        <li><a title="Über uns" href="./ueber-uns.html">Über uns</a></li>
+                        <li><a title="Leistungen" href="./leistungen.html">Leistungen</a></li>
+                        <li><a title="Kontakt" href="./kontakt.html">Kontakt</a></li>
+                        <li><a title="Impressum" href="./impressum.html">Impressum</a></li>
+                        <li><a title="Datenschutz" class="active" href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+    <main>
+        <div class="header">
+            <div class="center">
+            <h1>Datenschutz</h1>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4 class="desktop">Herbec Malerbetrieb <br>Kontaktdaten</h4>
+        <div class="row">
+            <h4 class="mobil">Herbec Malerbetrieb <br>Kontaktdaten</h4>
+            <div class="kasten">
+                <img src="../image/uhr.png" alt="">  
+                <ul>
+                    <li><span>Telefon Zeiten:</span></li>
+                    <li>Mo - Fr von 8:00 - 18 Uhr</li>
+                    <li>Sa von 8:00 - 14:00 Uhr</li>
+                </ul>
+            </div>
+            <div class="kasten">
+                <img src="../image/tel.png" alt="">
+                <ul>
+                    <li><span>Telefon:</span></li>
+                    <li><a href="tel:+4917662786286">+49 176 627 862 86</a></li>
+                </ul>
+            </div>
+            <div class="kasten">
+                <img src="../image/mail.png" alt="">
+                <ul>
+                    <li><span>Email:</span></li>
+                    <li><a href="mailto:herbec@icloud.com">Herbec@icloud.com</a></li>
+                </ul>
+            </div>
+        </div>
+            <ul class="footer">
+                <li><a title="Über uns" href="./ueber-uns.html">Über uns</a></li>
+                <li><a title="Leistungen" href="./leistungen.html">Leistungen</a></li>
+                <li><a title="Impressum" href="./impressum.html">Impressum</a></li>
+                <li><a title="Datenschutz" href="#">Datenschutz</a></li>
+            </ul>
+    </footer>
+    <script>
+        const hamMenu = document.querySelector('.ham-menu');
+ const offScreenMenu = document.querySelector('.off-screen-menu');
+ const overlay = document.getElementById('overlay');
+ 
+ hamMenu.addEventListener('click', () => {
+   const isActive = offScreenMenu.classList.toggle('active');
+   hamMenu.classList.toggle('active');
+ 
+   // Toggle fixed class
+   if (isActive) {
+     hamMenu.classList.add('fixed');
+     overlay.style.display = 'block';
+     document.body.style.overflow = 'hidden';
+   } else {
+     hamMenu.classList.remove('fixed');
+     overlay.style.display = 'none';
+     document.body.style.overflow = '';
+   }
+ });
+ 
+ overlay.addEventListener('click', () => {
+   offScreenMenu.classList.remove('active');
+   hamMenu.classList.remove('active');
+   hamMenu.classList.remove('fixed');
+   overlay.style.display = 'none';
+   document.body.style.overflow = '';
+ });
+       </script>
+</body>
+   
+</html>
